@@ -4,6 +4,7 @@
 $Desaturated-Red: hsl(0, 36%, 70%);
 $Soft-Red: hsl(0, 93%, 68%);
 $Light-Grey: #e2d0d0;
+$Good: #2ecc71;
 
 // ### Neutral
 
@@ -115,25 +116,14 @@ body{
                         color: $Soft-Red;
                         font-size: .8rem;
                     }
+
+                    .fas{
+                        visibility: hidden;
+                    }
                 }
 
                 .input-div.error{
-                    border-color: $Soft-Red;
-
-                    @keyframes color-me-in {
-                        /* You could think of as "step 1" */
-                        
-                        /* You could think of as "step 2" */
-                        50% {
-                            border-color: #2ecc71;
-                        }
-                        100%{
-                            border-color: $Light-Grey;
-                        }
-                    }
-                    &:hover{
-                        animation: color-me-in 3s;
-                    }
+                    border-color: $Soft-Red;                    
 
                     .error-icon{
                         visibility: visible;
@@ -141,13 +131,25 @@ body{
 
                     .error-message{
                         visibility: visible;
+                    }
+                }
+
+                @keyframes color-me-in {
+                    /* You could think of as "step 1" */
+                    
+                    /* You could think of as "step 2" */
+                    50% {
+                        border-color: $Good;
+                    }
+                    100%{
+                        border-color: $Light-Grey;
                     }
                 }
 
                 .input-div.success{
                     
-                    transition: 0.5s;
-                    border-color: #2ecc71;
+                    animation: color-me-in 3s;
+                    border-color: $Light-Grey;
 
                     .error-icon{
                         visibility: hidden;
@@ -155,6 +157,11 @@ body{
 
                     .error-message{
                         visibility: hidden;
+                    }
+
+                    .fas{
+                        visibility: visible;
+                        color: $Good;
                     }
                 }
                 
@@ -173,9 +180,10 @@ body{
                     border: none;
                     outline: none;
                     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-                    transition: 0.5s;
+                    transition: 0.25s;
                     align-self: center;
                     padding: 5px;
+                    cursor: pointer;
 
                     img{
                         height: 40%;
@@ -250,6 +258,8 @@ body{
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
+            background:  url("../images/bg-pattern-desktop.svg") no-repeat center;
+            background-size: cover;
 
             .desktop__logo-container{
                 width: 55%;

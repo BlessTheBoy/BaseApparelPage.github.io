@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/11d33f6eea.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dist/css/main.css">
   
@@ -38,15 +39,16 @@
         <p class="main-container__text">
           Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
-        <form action="" class="main-container__form">
-          <div class="input-div error">
+        <form action="" class="main-container__form" id="form">
+          <div class="input-div">
             <input type="email" class="main-container__form-input" placeholder="Email Address">
             <img src="/dist/images/icon-error.svg" alt="error" class="error-icon">
-            <small class="error-message">Error message</small>
+            <i class="fas fa-check-circle"></i>
+            <small class="error-message" id="error-message">Error message</small>
           </div>
           
           <div class="botton-div">
-            <button type="button">
+            <button>
               <img src="/dist/images/icon-arrow.svg" alt="send" class="button">
             </button>
           </div>
@@ -71,5 +73,6 @@
       </a>      
     </p>
   </footer> 
+  <script src="dist/js/main.js"></script>
 </body>
 </html>
