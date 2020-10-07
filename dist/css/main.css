@@ -179,6 +179,7 @@ body .neutral .main-container__form button {
   align-self: center;
   padding: 5px;
   cursor: pointer;
+  box-shadow: 0px 4px 14px #e2d0d0;
 }
 
 body .neutral .main-container__form button img {
