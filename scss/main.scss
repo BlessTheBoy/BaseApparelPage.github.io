@@ -101,14 +101,70 @@ body{
                         }
                     }
 
-                    .error{
+                    .error-icon{
                         visibility: hidden;
                         width: 20px;
                         fill: $Soft-Red;
-                    }                    
+                    }
+                    
+                    .error-message{
+                        visibility: hidden;
+                        position: absolute;
+                        display: inline-block;
+                        margin-top: 62px;
+                        color: $Soft-Red;
+                        font-size: .8rem;
+                    }
+                }
+
+                .input-div.error{
+                    border-color: $Soft-Red;
+
+                    @keyframes color-me-in {
+                        /* You could think of as "step 1" */
+                        
+                        /* You could think of as "step 2" */
+                        50% {
+                            border-color: #2ecc71;
+                        }
+                        100%{
+                            border-color: $Light-Grey;
+                        }
+                    }
+                    &:hover{
+                        animation: color-me-in 3s;
+                    }
+
+                    .error-icon{
+                        visibility: visible;
+                    }
+
+                    .error-message{
+                        visibility: visible;
+                    }
+                }
+
+                .input-div.success{
+                    
+                    transition: 0.5s;
+                    border-color: #2ecc71;
+
+                    .error-icon{
+                        visibility: hidden;
+                    }
+
+                    .error-message{
+                        visibility: hidden;
+                    }
+                }
+                
+                .button-div{
+                    padding: 5px 0;
+                    height: 50px;
                 }
 
                 button{
+                    position: absolute;
                     z-index: 1;
                     margin-left: -30px;
                     height: 40px;
@@ -119,6 +175,7 @@ body{
                     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
                     transition: 0.5s;
                     align-self: center;
+                    padding: 5px;
 
                     img{
                         height: 40%;
