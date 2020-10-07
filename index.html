@@ -41,14 +41,14 @@
         </p>
         <form action="" class="main-container__form" id="form">
           <div class="input-div">
-            <input type="email" class="main-container__form-input" placeholder="Email Address">
+            <input type="email" name="email" class="main-container__form-input" placeholder="Email Address">
             <img src="/dist/images/icon-error.svg" alt="error" class="error-icon">
             <i class="fas fa-check-circle"></i>
             <small class="error-message" id="error-message">Error message</small>
           </div>
           
           <div class="botton-div">
-            <button>
+            <button id="button">
               <img src="/dist/images/icon-arrow.svg" alt="send" class="button">
             </button>
           </div>
@@ -72,7 +72,9 @@
             </svg>                     
       </a>      
     </p>
-  </footer> 
+  </footer>
+  <script src="dist/js/jqueryCompressed.js"></script>
+  <script src="dist/js/jqueryserilize.js"></script>  
   <script src="dist/js/main.js"></script>
 </body>
 </html>
